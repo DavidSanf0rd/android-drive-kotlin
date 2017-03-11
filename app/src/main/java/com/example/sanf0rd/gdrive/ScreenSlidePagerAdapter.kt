@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentStatePagerAdapter
  */
 class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
-    val fragment = MainFragment()
+    val fragment = MainFragment.newInstance(title = "Fragment 1")
 
     override fun getItem(position: Int): Fragment {
         return fragment
