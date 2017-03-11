@@ -18,4 +18,8 @@ class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(f
     override fun getCount(): Int {
         return 1
     }
+
+    override fun getPageTitle(position: Int): CharSequence {
+        return "Fragment 1"
+    }
 }
