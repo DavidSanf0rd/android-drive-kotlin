@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity(),
 
     val tabLayout: TabLayout by bindView(R.id.tab_layout)
     val viewPager: ViewPager by bindView(R.id.view_pager)
+
     var pagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +29,6 @@ class MainActivity : AppCompatActivity(),
 
         viewPager.adapter = pagerAdapter
         tabLayout.setupWithViewPager(viewPager)
-
-
     }
 
     override fun onResume() {
@@ -79,12 +78,8 @@ class MainActivity : AppCompatActivity(),
         Log.i("DriveSuspended", "GoogleApiClient connection suspended")
     }
 
-
-
-
     override fun onStop() {
         super.onStop()
-
         mGoogleApiClient?.disconnect()
     }
 }

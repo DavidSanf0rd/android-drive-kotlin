@@ -9,8 +9,8 @@ import android.support.v4.app.FragmentStatePagerAdapter
  */
 class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
-    val fragment = MainFragment.newInstance(title = "Fragment 1")
-    val fragment2 = MainFragment.newInstance(title = "Fragment 2")
+    val fragment = CreateFileFragment.newInstance(title = "Fragment 1")
+    val fragment2 = CreateFileFragment.newInstance(title = "Fragment 2")
 
     val fragments = arrayOf(fragment, fragment2)
 
